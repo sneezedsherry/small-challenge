@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package school;
+
+service SchoolService {
+  rpc FindOne (SchoolById) returns (school) {}
+}
+
+message SchoolById {
+  int32 id = 1;
+}
+
+message School {
+  int32 id = 1;
+  string name = 2;
+}
